@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="2"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="secondary/style.css">
+    <!-- <link rel="stylesheet" href="secondary/bootstrap.css"> -->
+    <title>Expense Tracker</title>
+</head>
+<body> 
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <fieldset id="expense-form">
+            <legend>Enter Expense Details</legend>
+            <input type="text" id="expense-text" placeholder="Enter expense description"><br>
+            <input type="number" id="expense-amount" placeholder="Enter amount"><br>
+            <button onclick="calc()" type="submit">Add Expense</button>
+        </fieldset>
+        <fieldset id="income-form">
+            <legend>Enter Income Details</legend>
+            <input type="number" id="income" placeholder="Enter amount"><br>
+            <button onclick="calcInc()" type="submit">Add Income</button>
+        </fieldset>
+    </div>
+    <div class="container">
+        <h2>Transaction History</h2>
+        <ul id="transaction-list">
+            <li>Socks <p class="amt-list-neg">-40</p></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div id="balance-summary">
+            <p>Total Income: $<span id="income-amount">400</span></p>
+            <p>Total Expenses: $<span id="expense-ui">40</span></p>
+            <p>Balance: $<span id="balance-amount">0</span></p>
+        </div>
+    </div>
+    <script src="secondary/expense.js"></script>
+</body>
+</html>
